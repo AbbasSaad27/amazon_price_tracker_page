@@ -1,0 +1,250 @@
+body {
+  background-image: none;
+  background-color: rgb(241, 241, 241);
+}
+h2 {
+  font-size: 2vw;
+  margin-bottom: 8px;
+}
+#header {
+  margin-bottom: 40px;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows:
+    minmax(400px, min-content) minmax(100px, min-content) minmax(
+      450px,
+      min-content
+    )
+    minmax(150px, min-content);
+  grid-row-gap: 40px;
+}
+.product {
+  grid-row: 1 / 2;
+  background-color: white;
+  padding: 30px;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  grid-row-gap: 10px;
+}
+.image {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.image img {
+  width: 26vw;
+  height: 32vh;
+}
+.info {
+  padding: 0 30px 0;
+}
+.info h1 {
+  margin: 0;
+}
+.directory {
+  color: rgb(40, 77, 187);
+  cursor: context-menu;
+}
+.cp {
+  display: inline-block;
+  text-align: right;
+}
+.cp2 {
+  color: rgb(172, 172, 172);
+}
+.price {
+  color: rgb(23, 194, 177);
+  font-size: 2rem;
+  clear: both;
+}
+.btn2 {
+  float: right;
+  margin-top: 40px;
+}
+.product-chart img {
+  width: 26vw;
+  height: 250px;
+}
+.tracker {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.email-box {
+  width: 20vw;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid rgb(233, 230, 230);
+  padding-left: 10px;
+  box-shadow: 0px 0px 1px 0px rgb(172, 172, 172);
+  border-radius: 5px;
+}
+.checkbox {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: flex-end;
+  font-size: 0.8rem;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.half,
+.half2 {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+input[type="checkbox"] {
+  display: none;
+}
+input[type="checkbox"] + label {
+  margin: 5px;
+  cursor: pointer;
+}
+input[type="checkbox"] + label::before {
+  content: "\2714";
+  border: 1px solid rgb(233, 230, 230);
+  border-radius: 5px;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  padding: 0 0 5px 4px;
+  margin-right: 8px;
+  vertical-align: bottom;
+  color: transparent;
+  transform: scale(1);
+  transition: all 0.2s;
+}
+input[type="checkbox"]:checked + label::before {
+  background-color: rgb(40, 77, 187);
+  color: white;
+  border-color: rgb(40, 77, 187);
+}
+input[type="checkbox"] + label:active::before {
+  transform: scale(0);
+}
+.btn-container {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.text {
+  width: 180px;
+  height: 30px;
+  box-sizing: border-box;
+  border: 1px solid rgb(233, 230, 230);
+  padding-left: 10px;
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px 0px rgb(172, 172, 172);
+}
+input[type="text"]::placeholder {
+  text-align: center;
+}
+.heading {
+  grid-row: 2 / 3;
+}
+.products {
+  grid-row: 3 / 4;
+}
+.footer {
+  grid-row: 4 / 5;
+}
+@media only screen and (max-width: 966px) {
+  h2 {
+    font-size: 3vw;
+  }
+  .product {
+    grid-template-columns: 50% 50%;
+    grid-row-gap: 20px;
+  }
+  .image img {
+    width: 40vw;
+  }
+  .info {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .product-chart {
+    grid-column: span 2;
+    grid-row: 2 / 3;
+    margin: 0 auto;
+  }
+  .product-chart img {
+    width: 50vw;
+  }
+  .email-box {
+    width: 30vw;
+  }
+  .tracker {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .checkbox {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+  .btn-container {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+    justify-content: space-between;
+  }
+  .text {
+    width: 26vw;
+  }
+}
+@media only screen and (max-width: 800px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+  .product {
+    grid-template-columns: 100%;
+    padding: 30px 15px;
+  }
+  .image {
+    grid-row: 1 / 2;
+    margin: 0 auto;
+  }
+  .image img {
+    width: 100%;
+    height: auto;
+  }
+  .info {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    padding: 0;
+  }
+  .product-chart {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+  .product-chart img {
+    width: 100%;
+  }
+  .tracker {
+    grid-row: 4 / 5;
+  }
+  .email-box {
+    width: 200px;
+  }
+  .checkbox {
+    grid-column: 1 / 2;
+    grid-row: 5 / 6;
+  }
+  .btn-container {
+    grid-row: 6 / 7;
+  }
+  .text {
+    width: 190px;
+  }
+}
+@media only screen and (max-width: 326px) {
+  .btn2 {
+    float: left;
+  }
+}

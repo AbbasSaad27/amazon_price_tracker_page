@@ -1,0 +1,333 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@400;700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "Signika", sans-serif;
+  overflow-x: hidden;
+  background-image: url(/images/hero-image.png);
+  background-repeat: no-repeat;
+  background-position: 150% top;
+  background-size: 60vw;
+}
+select {
+  font-family: "Signika", sans-serif;
+  cursor: pointer;
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid rgb(216, 215, 215);
+}
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+#header {
+  width: 100%;
+  min-height: 65px;
+  max-height: 240px;
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid rgb(216, 215, 215);
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 0px 0px 2px 0px black;
+}
+.logo {
+  padding-left: 5%;
+}
+.navigation ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+.navigation ul li {
+  margin-left: 20px;
+  cursor: context-menu;
+}
+.reg-location {
+  padding-right: 5%;
+  padding-top: 10px;
+}
+.btn {
+  background: linear-gradient(to bottom, #f7e67b 5%, #ffc369 100%);
+  background-color: #f7e67b;
+  border-radius: 6px;
+  border: 1px solid #b5843c;
+  display: inline-block;
+  cursor: pointer;
+  color: #333333;
+  font-size: 15px;
+  font-family: "Signika", sans-serif;
+  font-weight: bold;
+  padding: 6px 20px;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+.btn:hover {
+  background: linear-gradient(to bottom, #ffc369 5%, #f7e67b 100%);
+  background-color: #ffc369;
+}
+.btn:active {
+  position: relative;
+  top: 1px;
+}
+#container {
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-auto-rows: minmax(30vw, auto) minmax(70px, min-content)
+    minmax(450px, min-content) minmax(240px, min-content)
+    minmax(150px, min-content);
+  grid-row-gap: 40px;
+}
+.search-field-container {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.search-field-container h1 {
+  width: 65%;
+  color: #4768ff;
+  font-size: 4vw;
+  margin-bottom: 20px;
+}
+.searchbar {
+  width: 35vw;
+  height: 30px;
+  background-color: rgb(252, 252, 252);
+  padding-left: 10px;
+  margin-right: 10px;
+  border: 1px solid rgb(216, 215, 215);
+  border-radius: 5px;
+}
+.sbtn {
+  font-family: "Signika", sans-serif;
+  padding: 8px 15px;
+}
+.search-field-container p {
+  color: rgb(216, 215, 215);
+}
+.navigation2 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+  max-height: 200px;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.navigation2 div {
+  margin-bottom: 20px;
+}
+.location2 ul {
+  display: flex;
+  margin-top: 0;
+  flex-wrap: wrap;
+}
+.nav {
+  margin-left: 20px;
+  box-sizing: border-box;
+  cursor: context-menu;
+  position: relative;
+  padding-bottom: 10px;
+}
+.nav::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  border-radius: 5px;
+  position: absolute;
+  background-color: rgb(233, 161, 67);
+  bottom: 0%;
+  left: 50%;
+  transition: all 0.3s;
+}
+.nav:hover::after {
+  left: 0%;
+  width: 100%;
+}
+.nav:target::after {
+  width: 100%;
+  left: 0%;
+}
+.filter-container {
+  border: 1px solid rgb(216, 215, 215);
+  padding: 10px;
+  border-radius: 5px;
+  height: 20px;
+  margin-top: -10px;
+  cursor: pointer;
+}
+.products {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.pd1 .img {
+  background-image: url(/images/product-1.png);
+}
+.pd2 .img {
+  background-image: url(/images/product-2.png);
+}
+.pd3 .img {
+  background-image: url(/images/product-3.png);
+}
+.pd4 .img {
+  background-image: url(/images/product-4.png);
+}
+.pd5 .img {
+  background-image: url(/images/product-5.png);
+}
+.pd {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.2fr;
+  min-width: 210px;
+  max-width: 260px;
+  max-height: 350px;
+  position: relative;
+  margin-bottom: 10px;
+  border: 1px solid rgb(216, 215, 215);
+  background-color: white;
+  border-radius: 6px;
+  box-sizing: border-box;
+  padding: 5px;
+}
+.pd .img {
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.img p {
+  background-color: rgb(23, 194, 177);
+  color: white;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 70px;
+  float: right;
+  margin: 8px 5px 0 0;
+  transition: all 0.3s;
+  cursor: context-menu;
+}
+.img p:hover {
+  padding: 5px 15px;
+}
+.pd a {
+  display: block;
+  text-align: center;
+}
+.pd p {
+  display: inline-block;
+}
+.buynow {
+  padding: 8px 0;
+}
+.highest_price {
+  float: right;
+}
+.cp,
+.hp {
+  font-weight: 700;
+}
+.cp {
+  color: rgb(71, 211, 164);
+}
+.hp {
+  color: rgb(172, 172, 172);
+}
+.newsletter {
+  grid-column: 1 / 2;
+  grid-row: 4 / 5;
+  background-color: #4768ff;
+  background-image: url(/images/Newsletter-image.png);
+  background-size: cover;
+  color: #fff;
+  padding: 30px;
+  box-sizing: border-box;
+}
+.email {
+  max-width: 180px;
+  min-height: 26px;
+  margin-right: 10px;
+  border: 1px solid rgb(216, 215, 215);
+  border-radius: 5px;
+  padding-left: 10px;
+}
+input[type="email"]::placeholder {
+  text-align: center;
+  color: rgb(128, 128, 128);
+}
+.newsletter h2 {
+  margin-bottom: 5px;
+}
+.newsletter p {
+  opacity: 50%;
+}
+.footer {
+  grid-column: 1 / 2;
+  grid-row: 5 / 6;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.f {
+  width: 160px;
+}
+.logo2 p {
+  margin-top: 0;
+}
+.footer ul {
+  cursor: pointer;
+  margin-top: 10px;
+  line-height: 20px;
+}
+.footer h4 {
+  margin-bottom: 0;
+}
+.social-media ul {
+  display: flex;
+  justify-content: space-between;
+}
+@media only screen and (max-width: 900px) {
+  body {
+    background-position-y: 8%;
+  }
+  #header {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .logo {
+    padding-left: 0;
+  }
+  .reg-location {
+    padding-right: 0;
+    padding-bottom: 10px;
+  }
+  .newsletter {
+    background-size: contain;
+  }
+}
+@media only screen and (max-width: 578px) {
+  .products {
+    justify-content: space-around;
+  }
+}
+@media only screen and (max-width: 575px) {
+  body {
+    background-position-y: 5%;
+  }
+}
+@media only screen and (max-width: 530px) {
+  .pricelist {
+    order: 2;
+  }
+  .search-field-container h1 {
+    font-size: 1.5rem;
+  }
+}
